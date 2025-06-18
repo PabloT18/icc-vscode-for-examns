@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sebPreferences>
+  <settingsPasswordHash></settingsPasswordHash>
+
+  <startURL>http://localhost:8080</startURL>
+
+  <mainBrowserWindowSettings>
+    <browserWindowViewMode>0</browserWindowViewMode>
+    <browserViewMode>0</browserViewMode>
+    <showReloadButton>true</showReloadButton>
+  </mainBrowserWindowSettings>
+
+  <urlFilterEnable>true</urlFilterEnable>
+  <urlFilterEnableContentFilter>false</urlFilterEnableContentFilter>
+
+  <urlFilterRules>
+    <rule>
+      <string>http://localhost:8080</string>
+      <ruleActive>true</ruleActive>
+      <action>allow</action>
+    </rule>
+    <rule>
+      <string>https://github.com</string>
+      <ruleActive>true</ruleActive>
+      <action>allow</action>
+    </rule>
+    <rule>
+      <string>https://github.com/login</string>
+      <ruleActive>true</ruleActive>
+      <action>allow</action>
+    </rule>
+    <rule>
+      <string>*</string>
+      <ruleActive>true</ruleActive>
+      <action>deny</action>
+    </rule>
+  </urlFilterRules>
+
+  <examSessionClearCookiesOnStart>true</examSessionClearCookiesOnStart>
+
+  <networkFilterEnable>true</networkFilterEnable>
+  <blockURLSchemes>all</blockURLSchemes>
+  <allowURLSchemes>http,https</allowURLSchemes>
+
+  <prohibitedProcessesActive>true</prohibitedProcessesActive>
+  <prohibitedProcesses>System Preferences, Terminal, Activity Monitor</prohibitedProcesses>
+</sebPreferences>
