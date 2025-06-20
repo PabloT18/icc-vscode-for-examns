@@ -40,8 +40,9 @@ Cuando se ejecuta el contenedor:
 
 1. Se bloquea el acceso al marketplace (`open-vsx.org`) y su IP mediante `iptables`.
 2. Se lanza Code-Server en el puerto `8080`.
-3. Se carga automáticamente el proyecto `HelloWorld` en el editor.
-4. El estudiante accede vía navegador, sin posibilidad de instalar nuevas extensiones ni salir del entorno.
+3. Si se define la variable de entorno `GIT_REPO_URL`, ese repositorio se clona en `/home/coder/project`.
+4. Se carga automáticamente el proyecto `HelloWorld` en el editor (o el clonado si existe).
+5. El estudiante accede vía navegador, sin posibilidad de instalar nuevas extensiones ni salir del entorno.
 
 ---
 
@@ -69,6 +70,7 @@ docker build -t vscode-java-safe .
 docker run -d \
   --name examen-java \
   -p 8080:8080 \
+  -e GIT_REPO_URL=https://tu.repo.git \
   vscode-java-safe
 ```
 
