@@ -38,7 +38,7 @@ Este entorno está diseñado para exámenes y prácticas seguras de programació
 
 Cuando se ejecuta el contenedor:
 
-1. Se bloquea el acceso al marketplace (`open-vsx.org`) y su IP mediante `iptables`.
+1. Se bloquea el acceso al marketplace (`open-vsx.org`) resolviendo su IP en tiempo de ejecución y aplicando reglas `iptables`.
 2. Se lanza Code-Server en el puerto `8080`.
 3. Se carga automáticamente el proyecto `HelloWorld` en el editor.
 4. El estudiante accede vía navegador, sin posibilidad de instalar nuevas extensiones ni salir del entorno.
