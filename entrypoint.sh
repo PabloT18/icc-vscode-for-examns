@@ -2,7 +2,10 @@
 set -e
 
 # Bloquear tráfico al marketplace
-iptables -A OUTPUT -d open-vsx.org -j REJECT || true
+# iptables no soporta dominios, por lo que resolvemos la IP de open-vsx.org en tiempo de ejecución.
+if resolved_ip=$(getent hosts open-vsx.org | awk '{ print $1 }'); then
+    iptables -A OUTPUT -d "$resolved_ip" -j REJECT || true
+fi
 iptables -A OUTPUT -d 65.9.95.66 -j REJECT || true
 
 # Si se proporciona un repositorio remoto, clónalo en el área de trabajo
