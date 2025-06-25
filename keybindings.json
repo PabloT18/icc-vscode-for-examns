@@ -1,0 +1,31 @@
+[
+    {
+        "key": "ctrl+shift+x",
+        "command": "-workbench.view.extensions"
+    },
+    {
+        "key": "",
+        "command": "workbench.view.extensions",
+        "when": "false"
+    },
+    {
+        "key": "",
+        "command": "workbench.extensions.search",
+        "when": "false"
+    },
+    {
+        "key": "",
+        "command": "workbench.extensions.action.installExtensions",
+        "when": "false"
+    },
+    {
+        "key": "",
+        "command": "workbench.extensions.action.showInstalledExtensions",
+        "when": "false"
+    },
+    {
+        "key": "",
+        "command": "workbench.extensions.action.showRecommendedExtensions",
+        "when": "false"
+    }
+]
