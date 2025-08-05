@@ -60,9 +60,31 @@ Cuando se ejecuta el contenedor:
 
 Ubícate en la carpeta del proyecto y ejecuta:
 
+#### Opción A: Usando Makefile (recomendado)
+
+```bash
+# Construcción rápida para pruebas locales
+make build-local
+
+# Construcción para arquitectura AMD64 (compatible con la mayoría de PCs)
+make build-amd64
+
+# Construcción multi-arquitectura (AMD64 + ARM64)
+make build-multi
+```
+
+#### Opción B: Comandos Docker directos
+
 ```bash
 docker build -t vscode-java-safe .
 ```
+
+```bash
+docker buildx build --platform linux/amd64 -t vscode-java-safe --load .
+```
+
+
+
 
 ### 2. Ejecutar el contenedor
 
@@ -70,9 +92,16 @@ docker build -t vscode-java-safe .
 docker run -d \
   --name examen-java \
   -p 8080:8080 \
-  -e GIT_REPO_URL=https://tu.repo.git \
+  -e GIT_USER_NAME="Nombre del Estudiante" \
+  -e GIT_USER_EMAIL="estudiante@universidad.edu" \
   vscode-java-safe
 ```
+
+**Variables de entorno requeridas:**
+- `GIT_USER_NAME`: Nombre completo del estudiante para configuración de Git
+- `GIT_USER_EMAIL`: Email del estudiante para configuración de Git
+
+> ⚠️ **Importante**: Ambas variables son obligatorias. Si no se definen, el contenedor se detendrá automáticamente.
 
 ### 3. Acceder al entorno
 

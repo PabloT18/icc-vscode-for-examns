@@ -14,8 +14,11 @@
     "extensions.ignoreRecommendations": true,
     "extensions.showRecommendationsOnlyOnDemand": true,
     "extensions.supportUntrustedWorkspaces": false,
-    "security.workspace.trust.enabled": false,
     "update.mode": "none",
     "update.showReleaseNotes": false,
-    "telemetry.telemetryLevel": "off"
+    "telemetry.telemetryLevel": "off",
+    "security.workspace.trust.untrustedFiles": "neverOpen",
+    "security.workspace.trust.enabled": false,
+    "window.openExternal": "off",
+    "simpleBrowser.enabled": true
 }

@@ -27,5 +27,10 @@
         "key": "",
         "command": "workbench.extensions.action.showRecommendedExtensions",
         "when": "false"
+    },
+    {
+        "key": "ctrl+k v",
+        "command": "markdown.showPreview",
+        "when": "editorLangId == 'markdown'"
     }
 ]
